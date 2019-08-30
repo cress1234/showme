@@ -4,3 +4,18 @@ button
 	background-color: #32FFA3;
 	width: 100px;
 }
+
+#outer
+{
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 100px;
+	padding: 50px;
+}
+
+#text-box
+{
+	border: 1px solid black;
+	border-radius: 100px;
+	padding: 25px;
+}
