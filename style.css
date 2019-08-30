@@ -1,6 +1,26 @@
 button
 {
-	border-radius: 100px;
-	background-color: #32FFA3;
-	width: 100px;
+    border-radius: 100px;
+    background-color: #32FFA3;
+    width: 100px;
+}
+
+#outer
+{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#inner
+{
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+#output
+{
+    margin: 5px 0px;
+    height: 20px;   
+    border: 1px solid red;
 }
