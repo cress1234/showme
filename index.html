@@ -4,7 +4,7 @@
 	<meta charset=utf-8>
 	<meta http-equiv="X-UA-Compatible" content="IE-edge">
 	<meta name="viewport" content="width-device-width, initial-scale=1">
-	<title>ShowMe!</title>
+	<title>refreshme</title>
 	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -16,7 +16,7 @@
         <div id="inner">
             <p> Select a random TV show by clicking the button below. </p>
             <div id="buttons"><button>Add show</button><button onclick="getShow()">Get show</button></div>
-            <div id="output"></div>
+            <input id="output" onfocus="clearInput()"></input>
         </div>
     </div>
 
