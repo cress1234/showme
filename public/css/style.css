@@ -1,11 +1,11 @@
 h1
 {
-  color: #331832;
+    color: #331832;
 }
 
 body
 {
-  background-color: #9fd8cb
+    background-color: #9fd8cb;
 }
 
 button
@@ -18,34 +18,33 @@ button
 }
 button:hover
 {
-  background-color: #ffff82;
-  color: #331832;
+    background-color: #ffff82;
+    color: #331832;
 }
 
 #outer
 {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    /*border: 1px solid black;*/
     padding: 10px;
 }
 #buttons
 {
-  display: flex;
-  width:500px;
-  justify-content: space-around;
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
 }
 
 #inner
 {
-  display: flex;
-  height: 200px;
-  background-color: #cae9e2;
-  border-radius: 5px;
-    width:600px;
+    display: flex;
+    height: 200px;
+    background-color: #cae9e2;
+    border-radius: 5px;
+    width: 600px;
     padding: 5px;
     justify-content: center;
     align-items: center;
@@ -54,12 +53,12 @@ button:hover
 
 #output
 { 
-  display: flex;
-  background-color: #f5fbf9;
+    display: flex;
+    background-color: #f5fbf9;
     justify-content: center;
     align-items: center;
     margin: 15px;
-    width:500px;
+    width: 500px;
     height: 40px;   
     border: 1px solid #83b1a7;
     border-radius: 5px;
