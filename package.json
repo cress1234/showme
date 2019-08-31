@@ -1,7 +1,7 @@
 {
-  "name": "weather-app",
+  "name": "showme",
   "version": "1.0.0",
-  "description": "test",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -11,6 +11,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^2.6.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "request": "^2.88.0"
   }
 }

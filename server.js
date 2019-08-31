@@ -21,11 +21,12 @@ request(url, function (err, response, body) {
       res.render('index', {details: null, error: 'Error, please try again'});
     } else {
       let details = JSON.parse(body)
-      if(details.tvShow == undefined){
+      if(details.tvShow.name == undefined){
         res.render('index', {details: null, error: 'Error, please try again'});
       } else {
         //it works
-        console.log(details.tvShow.name)
+        outputText = details.tvShow.name + "<br>" + details.tvShow.description;
+        res.render('index', {details: outputText, error: null});
       }
     }
   });
