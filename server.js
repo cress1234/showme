@@ -16,7 +16,8 @@ app.post('/', function (req, res)
 {
   let show = req.body.show;
   let url = `https://www.episodate.com/api/show-details?q=${show}`
-request(url, function (err, response, body) {
+  //change to search fn, add buttons to html to select correct id 
+  request(url, function (err, response, body) {
     if(err){
       res.render('index', {details: null, error: 'Error, please try again'});
     } else {
@@ -24,14 +25,14 @@ request(url, function (err, response, body) {
       if(details.tvShow.name == undefined){
         res.render('index', {details: null, error: 'Error, please try again'});
       } else {
-        //it works
         outputText = details.tvShow.name + "<br>" + details.tvShow.description;
         res.render('index', {details: outputText, error: null});
+        //need to add selected TV show to stored set
       }
     }
   });
 })
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('ShowMe running on port 3000')
 })
