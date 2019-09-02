@@ -72,9 +72,6 @@ button:disabled
     align-items: center;
 }
 
-#addshow {  }
-#getshow {  }
-
 #addform
 {
     display: flex;
@@ -93,4 +90,11 @@ button:disabled
     display: flex;
     align-self: flex-end;
     width: 100%;
+}
+
+.result{}
+
+.result-thumbnail
+{
+    width: 100px;
 }

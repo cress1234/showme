@@ -10,35 +10,46 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/', function(req,res)
 {
-  res.render('index',{details:null,error:null})
+  res.render('index',{result:null,error:null})
 })
 
 app.post('/', function (req, res) 
 {
   let show = req.body.show.trim().replace(/ /g,'-');
-  console.log(show);
   if ( show === "" )
   {
-    res.render('index',{details:null,error: 'Enter the name of the show above.'});
+    res.render('index',{result:null,error: 'Enter the name of the show above.'});
     return;
   }
-  let url = `https://www.episodate.com/api/show-details?q=${show}`
-  //change to search fn, add buttons to html to select correct id 
+  let url = `https://www.episodate.com/api/search?q=${show}&page=1`
+  //add buttons to html to select correct id 
   request(url, function (err, response, body) {
     if(err){
-      res.render('index', {details: null, error: 'Show not found.'});
+      res.render('index', {result: null, error: 'Error.'});
     } else {
       let details = JSON.parse(body)
-      if(details.tvShow.name == undefined){
-        res.render('index', {details: null, error: 'Show not found.'});
+      if(details.total === "0"){
+        res.render('index', {result: null, error: 'No results.'});
       } else {
-        outputText = details.tvShow.name + "<br>" + details.tvShow.description;
-        res.render('index', {details: outputText, error: null});
+        // let ids = []
+        // let names = []
+        // let imgs = []
+        // for(let i=0 ; i < details.length ; i++){
+        //   ids.push(details.tv_shows[i].id)
+        //   names.push(details.tv_shows[i].name)
+        //   imgs.push(details.tv_shows[i].image_thumbnail.path)
+        // };
+        // let outputText = {};
+        // for(let i=0 ; i < details.length ; i++){
+        //   outputText.push("id":ids[i],"name":names[i],"img":imgs[i])
+        // }
+        let outputText = details.tv_shows;
+        res.render('index', {result: outputText, error: null});
         //need to add selected TV show to stored set
       }
     }
   });
-})
+});
 
 app.listen(3000, function () {
   console.log('ShowMe running on port 3000')

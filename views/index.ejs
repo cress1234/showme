@@ -19,19 +19,23 @@
                 <div id="inputs">
                     <form action="/" method="post" id="addform">
                         <input name="show" id="output" onfocus="clearInput()">
-                        <button type="submit" id="addshow" onclick="addShow()">
+                        <button type="submit" id="addshow">
                             Add show
                         </button>
                     </form>
                     <button onclick="getShow()" id="getshow">Get show</button>
                 </div>
                 <div id="api-results">
-                    <% if(details !== null){ %>
-                    <p><%- details %></p>
-                    <% } %>
                     <% if(error !== null){ %>
-                    <p><%= error %></p>
-                    <% } %>
+                        <p><%= error %></p>
+                        <% } %>
+                    <% if(result !== null){ %>
+                        <% for(let i = 0; i < result.length ; i++){ %>
+                        <div class='result'>
+                            <img class='result-thumbnail' src='<%= result[i].image_thumbnail_path %>'> </img>
+                            <%= result[i].name %> </div>
+                        <%}%>
+                    <% }%>
                 </div>
             </div>
         </div>
