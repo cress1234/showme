@@ -31,9 +31,17 @@
                         <% } %>
                     <% if(result !== null){ %>
                         <% for(let i = 0; i < result.length ; i++){ %>
-                        <div class='result'>
-                            <img class='result-thumbnail' src='<%= result[i].image_thumbnail_path %>'> </img>
-                            <%= result[i].name %> </div>
+                        <div class="result-line">
+                            <div class='result-info'>
+                                <img class='result-thumbnail' src='<%= result[i].image_thumbnail_path %>'> </img>
+                                <div class='result-text'>
+                                <%= result[i].name %> 
+                                </div>
+                            </div>
+                            <div class='result-button'> 
+                                <button class="selectshow" onclick="selectShow(<%= i %>)"> Select </button>
+                            </div>
+                        </div>
                         <%}%>
                     <% }%>
                 </div>

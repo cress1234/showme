@@ -26,3 +26,10 @@ function clearInput()
         addbutton.disabled = false
     }
 }
+
+// function selectShow(let i)
+// {
+//     //i > result.tv_shows[i].id
+//     //go back to other url with the id
+//     //add description and year to 
+// }

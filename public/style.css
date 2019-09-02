@@ -92,9 +92,51 @@ button:disabled
     width: 100%;
 }
 
-.result{}
+#api-results{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.result-line{
+    display: flex;
+    justify-content: left;
+}
+
+.result-info{
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    width: 70%;
+}
+
+.result-text{
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+    width: 200px;
+    margin: 30px 10px;
+    color: #331832;
+}
 
 .result-thumbnail
 {
+    /*border: 5px solid #331832;*/
+    border: 5px solid #9fd8cb;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.result-button{
+    display: flex;
+    align-items: flex-end;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.selectshow{
     width: 100px;
+    align-items: center;
+    height: 35px;
 }
